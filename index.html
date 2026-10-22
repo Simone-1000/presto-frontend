@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Esplora gli annunci di Presto e trova la tua prossima occasione tra tecnologia, motori, sport, casa e molto altro."
+  >
+
+  <title>Presto | La tua prossima occasione</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./main.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="container navbar" aria-label="Navigazione principale">
+      <a class="logo" href="./index.html" aria-label="Presto, pagina iniziale">
+        presto<span>.</span>
+      </a>
+
+      <a class="nav-link" href="#annunci">Esplora gli annunci ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-layout">
+        <div>
+          <p class="eyebrow">NUOVE POSSIBILITÀ, OGNI GIORNO</p>
+
+          <h1 id="hero-title">
+            Le cose belle<br>
+            <span>si trovano qui.</span>
+          </h1>
+
+          <p class="hero-description">
+            Dai spazio alle tue passioni. Esplora gli annunci,
+            confronta i prezzi e trova la tua prossima occasione.
+          </p>
+
+          <a href="#annunci" class="button">Scopri gli annunci ↓</a>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <span class="hero-circle"></span>
+          <div class="floating-card card-tech">
+            <span>🎧</span>
+            Tecnologia e musica
+          </div>
+          <div class="floating-card card-home">
+            <span>🛋️</span>
+            Una nuova idea di casa
+          </div>
+          <div class="floating-card card-sport">
+            <span>⚽</span>
+            Spazio alle passioni
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container catalog" id="annunci" aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ESPLORA PRESTO</p>
+          <h2 id="catalog-title">Trova quello che cerchi</h2>
+        </div>
+
+        <p id="results-count" role="status">Caricamento annunci…</p>
+      </div>
+
+      <div class="catalog-layout">
+        <aside class="filters" aria-labelledby="filters-title">
+          <h3 id="filters-title">Filtra gli annunci</h3>
+
+          <div class="field">
+            <label for="search-input">Cerca per nome</label>
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Es. cuffie, lampada…"
+            >
+          </div>
+
+          <div class="field">
+            <label for="category-select">Categoria</label>
+            <select id="category-select">
+              <option value="all">Tutte le categorie</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="type-select">Tipo di annuncio</label>
+            <select id="type-select">
+              <option value="all">Tutti gli annunci</option>
+              <option value="sell">In vendita</option>
+              <option value="search">Cerco</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="price-input">Prezzo massimo (€)</label>
+            <input
+              id="price-input"
+              type="number"
+              min="0"
+              step="0.01"
+              placeholder="Qualsiasi prezzo"
+            >
+          </div>
+
+          <button class="reset-button" id="reset-button" type="button">
+            Azzera i filtri
+          </button>
+        </aside>
+
+        <div class="results">
+          <div class="sort-bar">
+            <label for="sort-select">Ordina per</label>
+
+            <select id="sort-select">
+              <option value="default">Ordine originale</option>
+              <option value="price-asc">Prezzo crescente</option>
+              <option value="price-desc">Prezzo decrescente</option>
+              <option value="name">Nome A–Z</option>
+            </select>
+          </div>
+
+          <p id="feedback" class="feedback" role="status" hidden></p>
+
+          <div class="cards-grid" id="cards-wrapper"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <a class="logo" href="./index.html" aria-label="Presto, pagina iniziale">
+        presto<span>.</span>
+      </a>
+
+      <p>La tua prossima occasione, a portata di clic.</p>
+
+      <a href="#annunci">Sfoglia gli annunci ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
